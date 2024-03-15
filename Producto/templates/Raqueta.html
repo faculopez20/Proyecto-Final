@@ -1,0 +1,8 @@
+<ul>
+    {% for Raqueta in Raqueta %}
+    <li>{{Raqueta}} | 
+        
+        | <a href={% url 'editar_Raqueta' Raqueta.id %}>Editar</a> 
+    </li>
+    {% endfor %}
+</ul>

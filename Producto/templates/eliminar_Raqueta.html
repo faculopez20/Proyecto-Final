@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block header %}
+<h1>Eliminar Raqueta</h1>
+{% endblock header %}
+
+{% block main %}
+<form action={% url "eliminar_Raqueta" Raqueta.id %} method="POST">
+    {% csrf_token %}
+    <p>Confirma el borrado de el Raqueta {{Raqueta}}</p>
+    <input type="submit" value="Confirmar">
+</form>
+{% endblock main %}
